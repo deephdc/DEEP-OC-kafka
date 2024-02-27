@@ -1,0 +1,35 @@
+{
+    "title": "Streaming with Kafka",
+    "summary": "Streaming tool with Kafka",
+    "description": [
+        "This tools offers the possibility of streaming in production with Kafka.\n"
+    ],
+    "keywords": [
+        "docker",
+        "api-v2"
+    ],
+    "license": "Apache 2.0",
+    "date_creation": "2024-02-27",
+    "sources": {
+		"dockerfile_repo": "https://github.com/deephdc/DEEP-OC-kafka",
+		"docker_registry_repo": "",
+		"code": ""
+	},
+    "continuous_integration": {
+        "build_status_badge": "https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-kafka/main",
+        "build_status_url": "https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-kafka/job/main"
+    },
+    "tosca": [
+        {
+            "title": "Mesos (CPU)",
+            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-marathon-webdav.yml",
+            "inputs": [
+                "rclone_conf",
+                "rclone_url",
+                "rclone_vendor",
+                "rclone_user",
+                "rclone_pass"
+            ]
+        }
+    ]
+}
